@@ -111,14 +111,14 @@ export function PrayerCountdownNav({ className }: { className?: string }) {
       href="/prayer-times"
       title={t("prayerCount.scheduleTitle")}
       className={cn(
-        "flex min-h-[44px] min-w-0 max-w-[min(100%,14rem)] shrink-0 touch-manipulation flex-col items-center justify-center gap-0.5 rounded-full border border-emerald-900/15 px-3 py-2 text-emerald-950 hover:bg-emerald-50 sm:min-h-0 sm:flex-row sm:items-baseline sm:justify-center sm:gap-2 sm:px-3 sm:py-1 sm:max-w-[15rem] lg:max-w-[16rem] xl:max-w-none dark:border-emerald-500/40 dark:text-emerald-50 dark:hover:bg-emerald-900/60",
+        "inline-flex min-h-[44px] max-w-full shrink-0 touch-manipulation flex-col items-center justify-center gap-0.5 whitespace-nowrap rounded-full border border-emerald-900/15 px-2 py-2 text-emerald-950 hover:bg-emerald-50 sm:min-h-0 sm:flex-row sm:items-baseline sm:justify-center sm:gap-2 sm:px-3 sm:py-1.5 dark:border-emerald-500/40 dark:text-emerald-50 dark:hover:bg-emerald-900/60",
         className,
       )}
     >
-      <span className="truncate text-xs font-medium text-emerald-800 dark:text-emerald-200 sm:text-sm">
+      <span className="text-[10px] font-medium leading-tight text-emerald-800 sm:text-[11px] md:text-xs dark:text-emerald-200">
         {prayerLabel(locale, next.prayer)} · {t("prayerCount.iqamah")}
       </span>
-      <span className="font-mono text-xs tabular-nums text-emerald-950 dark:text-emerald-100 sm:text-sm">
+      <span className="font-mono text-[10px] tabular-nums leading-none text-emerald-950 sm:text-[11px] md:text-xs dark:text-emerald-100">
         {formatRemaining(remainingMs)}
       </span>
     </Link>

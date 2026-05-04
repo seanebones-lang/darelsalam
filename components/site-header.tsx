@@ -49,7 +49,7 @@ export function SiteHeader({ links }: { links: NavLinkSanity[] }) {
               </button>
             </div>
           </div>
-          <div className="flex min-w-0 justify-center lg:z-0 lg:flex-1 lg:px-2 lg:overflow-hidden">
+          <div className="flex w-full min-w-0 justify-center px-1 sm:min-w-[11rem] lg:min-w-[12rem] lg:flex-1 lg:px-2">
             <PrayerCountdownNav />
           </div>
           <div className="relative z-10 hidden min-w-0 items-center gap-2 lg:flex lg:shrink-0 lg:ps-2">
