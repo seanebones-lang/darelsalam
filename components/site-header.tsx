@@ -17,8 +17,12 @@ export function SiteHeader({ links }: { links: NavLinkSanity[] }) {
   return (
     <header className="sticky top-0 z-40 border-b border-emerald-900/10 bg-white/95 pt-[env(safe-area-inset-top,0px)] backdrop-blur-md dark:border-emerald-600/40 dark:bg-emerald-950">
       <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6 sm:py-4">
-        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
-          <div className="flex items-center justify-between gap-3 lg:contents">
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4 lg:justify-between">
+          {/*
+            Avoid display:contents here — it can break flex item boundaries in Chrome
+            and let the centered iqāmah chip paint over the first nav link.
+          */}
+          <div className="flex min-w-0 items-center justify-between gap-3 lg:shrink-0">
             <Link
               href="/"
               className="flex min-w-0 max-w-[65%] shrink-0 flex-col leading-tight sm:max-w-none lg:max-w-none"
@@ -45,10 +49,10 @@ export function SiteHeader({ links }: { links: NavLinkSanity[] }) {
               </button>
             </div>
           </div>
-          <div className="flex min-w-0 justify-center lg:flex-1 lg:px-2">
+          <div className="flex min-w-0 justify-center lg:z-0 lg:flex-1 lg:px-2 lg:overflow-hidden">
             <PrayerCountdownNav />
           </div>
-          <div className="hidden items-center gap-2 lg:flex lg:shrink-0">
+          <div className="relative z-10 hidden min-w-0 items-center gap-2 lg:flex lg:shrink-0 lg:ps-2">
             <nav
               className="flex max-w-xl flex-wrap items-center justify-end gap-1 text-sm font-medium text-emerald-950 xl:max-w-none xl:gap-2 dark:text-emerald-100"
               aria-label="Primary"

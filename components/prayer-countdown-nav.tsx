@@ -111,7 +111,7 @@ export function PrayerCountdownNav({ className }: { className?: string }) {
       href="/prayer-times"
       title={t("prayerCount.scheduleTitle")}
       className={cn(
-        "flex min-h-[44px] min-w-0 max-w-[min(100%,14rem)] shrink-0 touch-manipulation flex-col items-center justify-center gap-0.5 rounded-full border border-emerald-900/15 px-3 py-2 text-emerald-950 hover:bg-emerald-50 sm:min-h-0 sm:max-w-none sm:flex-row sm:items-baseline sm:justify-start sm:gap-2 sm:px-3 sm:py-1 dark:border-emerald-500/40 dark:text-emerald-50 dark:hover:bg-emerald-900/60",
+        "flex min-h-[44px] min-w-0 max-w-[min(100%,14rem)] shrink-0 touch-manipulation flex-col items-center justify-center gap-0.5 rounded-full border border-emerald-900/15 px-3 py-2 text-emerald-950 hover:bg-emerald-50 sm:min-h-0 sm:flex-row sm:items-baseline sm:justify-center sm:gap-2 sm:px-3 sm:py-1 sm:max-w-[15rem] lg:max-w-[16rem] xl:max-w-none dark:border-emerald-500/40 dark:text-emerald-50 dark:hover:bg-emerald-900/60",
         className,
       )}
     >
