@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PortableBody } from "@/components/portable-body";
+import { localizePageContent } from "@/lib/i18n/localize-cms";
 import { t } from "@/lib/i18n/messages";
 import { getServerLocale } from "@/lib/i18n/server";
 import { getPageBySlug } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Quran Resources",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
+  const desc = t(locale, "meta.quranDescription");
+  return {
+    title: t(locale, "meta.quranTitle"),
+    description: desc,
+    openGraph: {
+      locale: locale === "ar" ? "ar_SA" : "en_US",
+      title: t(locale, "meta.quranTitle"),
+      description: desc,
+    },
+  };
+}
 
 export default async function QuranPage() {
-  const [page, locale] = await Promise.all([
-    getPageBySlug("quran"),
-    getServerLocale(),
-  ]);
+  const [cms, locale] = await Promise.all([getPageBySlug("quran"), getServerLocale()]);
+  const page = localizePageContent(cms, locale);
 
   return (
     <div className="mx-auto max-w-3xl space-y-8 px-4 py-12 sm:px-6 sm:py-16 md:py-24">

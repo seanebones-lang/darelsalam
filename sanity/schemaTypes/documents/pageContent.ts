@@ -13,10 +13,17 @@ export const pageContent = defineType({
       validation: (r) => r.required(),
     }),
     defineField({ name: "title", title: "Title", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "titleAr", title: "Title (Arabic)", type: "string" }),
     defineField({ name: "intro", title: "Intro", type: "text", rows: 3 }),
+    defineField({ name: "introAr", title: "Intro (Arabic)", type: "text", rows: 3 }),
     defineField({
       name: "body",
       title: "Body",
+      type: "blockContent",
+    }),
+    defineField({
+      name: "bodyAr",
+      title: "Body (Arabic)",
       type: "blockContent",
     }),
     defineField({
@@ -25,5 +32,6 @@ export const pageContent = defineType({
       type: "text",
       rows: 2,
     }),
+    defineField({ name: "seoDescriptionAr", title: "SEO description (Arabic)", type: "text", rows: 2 }),
   ],
 });

@@ -2,6 +2,7 @@ import { ChatWidget } from "@/components/chat-widget";
 import { CookieBanner } from "@/components/cookie-banner";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { localizeSiteSettings } from "@/lib/i18n/localize-cms";
 import { getServerLocale } from "@/lib/i18n/server";
 import { t } from "@/lib/i18n/messages";
 import { getSiteSettings } from "@/lib/site-data";
@@ -11,10 +12,8 @@ export default async function SiteChromeLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [settings, locale] = await Promise.all([
-    getSiteSettings(),
-    getServerLocale(),
-  ]);
+  const [rawSettings, locale] = await Promise.all([getSiteSettings(), getServerLocale()]);
+  const settings = localizeSiteSettings(rawSettings, locale);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -22,7 +21,10 @@ export default async function SiteChromeLayout({
         {t(locale, "common.skip")}
       </a>
       <SiteHeader links={settings.navigation ?? []} />
-      <main id="site-main" className="flex min-w-0 flex-1 flex-col pb-[env(safe-area-inset-bottom,0px)]">
+      <main
+        id="site-main"
+        className="flex min-w-0 flex-1 flex-col pb-28 sm:pb-24 md:pb-[max(3rem,env(safe-area-inset-bottom,0px))]"
+      >
         {children}
       </main>
       <SiteFooter

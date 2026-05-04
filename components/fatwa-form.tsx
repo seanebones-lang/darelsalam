@@ -87,7 +87,8 @@ export function FatwaForm({
             required
             id="firstName"
             name="firstName"
-            className="mt-2 w-full rounded-2xl border border-emerald-900/15 bg-emerald-50/40 px-4 py-3.5 text-base outline-none ring-emerald-500/60 focus-visible:ring sm:text-sm dark:border-emerald-600/35 dark:bg-emerald-950 dark:text-emerald-50"
+            autoComplete="given-name"
+            className="mt-2 min-h-12 w-full rounded-2xl border border-emerald-900/15 bg-emerald-50/40 px-4 py-3.5 text-base outline-none ring-emerald-500/60 focus-visible:ring sm:text-sm dark:border-emerald-600/35 dark:bg-emerald-950 dark:text-emerald-50"
           />
         </div>
         <div className="md:col-span-1">
@@ -98,7 +99,8 @@ export function FatwaForm({
             required
             id="lastName"
             name="lastName"
-            className="mt-2 w-full rounded-2xl border border-emerald-900/15 bg-emerald-50/40 px-4 py-3.5 text-base outline-none ring-emerald-500/60 focus-visible:ring sm:text-sm dark:border-emerald-600/35 dark:bg-emerald-950 dark:text-emerald-50"
+            autoComplete="family-name"
+            className="mt-2 min-h-12 w-full rounded-2xl border border-emerald-900/15 bg-emerald-50/40 px-4 py-3.5 text-base outline-none ring-emerald-500/60 focus-visible:ring sm:text-sm dark:border-emerald-600/35 dark:bg-emerald-950 dark:text-emerald-50"
           />
         </div>
         <div className="md:col-span-1">
@@ -110,7 +112,8 @@ export function FatwaForm({
             type="email"
             id="email"
             name="email"
-            className="mt-2 w-full rounded-2xl border border-emerald-900/15 bg-emerald-50/40 px-4 py-3.5 text-base outline-none ring-emerald-500/60 focus-visible:ring sm:text-sm dark:border-emerald-600/35 dark:bg-emerald-950 dark:text-emerald-50"
+            autoComplete="email"
+            className="mt-2 min-h-12 w-full rounded-2xl border border-emerald-900/15 bg-emerald-50/40 px-4 py-3.5 text-base outline-none ring-emerald-500/60 focus-visible:ring sm:text-sm dark:border-emerald-600/35 dark:bg-emerald-950 dark:text-emerald-50"
           />
         </div>
         <div className="md:col-span-1">
@@ -120,7 +123,10 @@ export function FatwaForm({
           <input
             id="phone"
             name="phone"
-            className="mt-2 w-full rounded-2xl border border-emerald-900/15 bg-emerald-50/40 px-4 py-3.5 text-base outline-none ring-emerald-500/60 focus-visible:ring sm:text-sm dark:border-emerald-600/35 dark:bg-emerald-950 dark:text-emerald-50"
+            type="tel"
+            inputMode="tel"
+            autoComplete="tel"
+            className="mt-2 min-h-12 w-full rounded-2xl border border-emerald-900/15 bg-emerald-50/40 px-4 py-3.5 text-base outline-none ring-emerald-500/60 focus-visible:ring sm:text-sm dark:border-emerald-600/35 dark:bg-emerald-950 dark:text-emerald-50"
           />
         </div>
         <div className="md:col-span-2">

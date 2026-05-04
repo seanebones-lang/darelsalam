@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
 import { PortableBody } from "@/components/portable-body";
+import { localizeLegalPage } from "@/lib/i18n/localize-cms";
 import { t } from "@/lib/i18n/messages";
 import { getServerLocale } from "@/lib/i18n/server";
 import { getLegalBySlug } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
+  const desc = t(locale, "meta.privacyDescription");
+  return {
+    title: t(locale, "meta.privacyTitle"),
+    description: desc,
+    openGraph: {
+      locale: locale === "ar" ? "ar_SA" : "en_US",
+      title: t(locale, "meta.privacyTitle"),
+      description: desc,
+    },
+  };
+}
 
 export default async function PrivacyPage() {
-  const [legal, locale] = await Promise.all([
-    getLegalBySlug("privacy"),
-    getServerLocale(),
-  ]);
+  const [raw, locale] = await Promise.all([getLegalBySlug("privacy"), getServerLocale()]);
+  const legal = localizeLegalPage(raw, locale);
 
   return (
     <div className="mx-auto max-w-4xl space-y-6 px-4 py-12 sm:px-6 sm:py-16 md:py-24">

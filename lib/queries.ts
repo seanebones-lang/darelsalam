@@ -6,10 +6,14 @@ export const siteSettingsQuery = groq`
     newMuslimsSlides[]->{
       _id,
       title,
+      titleAr,
       subtitle,
+      subtitleAr,
       image,
       body,
+      bodyAr,
       linkLabel,
+      linkLabelAr,
       linkHref,
       orderRank
     }

@@ -37,21 +37,21 @@ export function SiteFooter({ locale, settings }: SiteFooterProps) {
           </ul>
         </div>
         <nav
-          className="flex flex-col gap-1 text-sm uppercase tracking-wide text-emerald-200"
+          className="flex flex-wrap gap-x-6 gap-y-2 text-sm uppercase tracking-wide text-emerald-200 sm:flex-col sm:gap-x-0 sm:gap-y-1"
           aria-label="Footer"
         >
           <Link
             href="/privacy"
-            className="touch-manipulation rounded-lg py-2.5 hover:text-white sm:py-1"
+            className="touch-manipulation rounded-lg py-2 hover:text-white sm:py-1"
           >
             {t(locale, "footer.privacy")}
           </Link>
-          <Link href="/terms" className="touch-manipulation rounded-lg py-2.5 hover:text-white sm:py-1">
+          <Link href="/terms" className="touch-manipulation rounded-lg py-2 hover:text-white sm:py-1">
             {t(locale, "footer.terms")}
           </Link>
           <Link
             href="/contact"
-            className="touch-manipulation rounded-lg py-2.5 hover:text-white sm:py-1"
+            className="touch-manipulation rounded-lg py-2 hover:text-white sm:py-1"
           >
             {t(locale, "footer.contact")}
           </Link>

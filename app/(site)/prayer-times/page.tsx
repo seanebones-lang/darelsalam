@@ -13,10 +13,19 @@ import { getPrayerOverrides, getSiteSettings } from "@/lib/site-data";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
-  title: "Athan & Iqamah",
-  description: "Congregational athan timings with editable iqāmah etiquette for Dar El Salam.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
+  const desc = t(locale, "meta.prayerDescription");
+  return {
+    title: t(locale, "meta.prayerTitle"),
+    description: desc,
+    openGraph: {
+      locale: locale === "ar" ? "ar_SA" : "en_US",
+      title: t(locale, "meta.prayerTitle"),
+      description: desc,
+    },
+  };
+}
 
 export default async function PrayerTimesPage() {
   const [settings, locale] = await Promise.all([
@@ -86,12 +95,17 @@ export default async function PrayerTimesPage() {
           </p>
         </div>
       </div>
+      <p className="text-center text-xs leading-relaxed text-emerald-800/90 md:hidden dark:text-emerald-200/90">
+        {t(locale, "prayer.scrollHint")}
+      </p>
       <div className="rounded-[42px] border border-emerald-900/15 bg-white/95 p-3 shadow-sm dark:border-emerald-600/35 dark:bg-emerald-900 sm:p-4 md:p-6">
-        <div className="-mx-1 overflow-x-auto overscroll-x-contain rounded-3xl px-1 sm:mx-0 sm:px-0">
-          <table className="w-full min-w-[720px] text-start text-sm">
+        <div className="-mx-1 overflow-x-auto overscroll-x-contain rounded-3xl px-1 sm:mx-0 sm:px-0 [scrollbar-gutter:stable]">
+          <table className="w-full min-w-[640px] text-start text-sm sm:min-w-[720px]">
             <thead className="text-xs uppercase tracking-wide text-emerald-800 dark:text-emerald-100">
               <tr className="bg-emerald-50/70 dark:bg-emerald-800/80 dark:text-emerald-50">
-                <th className="rounded-tl-3xl px-5 py-3">{t(locale, "prayer.colDate")}</th>
+                <th className="sticky start-0 z-20 rounded-tl-3xl bg-emerald-50 px-3 py-3 shadow-[6px_0_14px_-6px_rgba(6,36,28,0.2)] sm:px-5 dark:bg-emerald-800 dark:shadow-[6px_0_14px_-6px_rgba(0,0,0,0.45)]">
+                  {t(locale, "prayer.colDate")}
+                </th>
                 {(["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"] as const).map(
                   (salah) => (
                     <th key={salah} className="px-3 py-3 text-center">
@@ -107,7 +121,7 @@ export default async function PrayerTimesPage() {
                   key={row.isoDate}
                   className="border-t border-emerald-900/10 transition hover:bg-emerald-50/40 dark:border-emerald-100/10 dark:hover:bg-emerald-900/30"
                 >
-                  <td className="max-w-[150px] px-5 py-4 font-semibold">
+                  <td className="sticky start-0 z-10 max-w-[150px] bg-white px-3 py-3 font-semibold shadow-[6px_0_14px_-6px_rgba(6,36,28,0.12)] sm:px-5 sm:py-4 dark:bg-emerald-900 dark:shadow-[6px_0_14px_-6px_rgba(0,0,0,0.35)]">
                     <div>{row.dateLabel}</div>
                     <div className="text-xs font-normal text-emerald-800/70 dark:text-emerald-100/80">
                       {row.isoDate}
@@ -117,7 +131,7 @@ export default async function PrayerTimesPage() {
                     (salah, idx, arr) => (
                       <td
                         key={salah}
-                        className={`px-4 py-4 text-xs leading-relaxed ${
+                        className={`px-2 py-3 text-xs leading-relaxed sm:px-4 sm:py-4 ${
                           salah === arr[arr.length - 1]
                             ? "rounded-tr-3xl md:rounded-tr-none"
                             : ""
@@ -143,7 +157,7 @@ export default async function PrayerTimesPage() {
           </table>
         </div>
       </div>
-      <section className="rounded-[34px] border border-dashed border-emerald-800/40 bg-emerald-50/40 px-8 py-6 text-xs leading-relaxed text-emerald-900 dark:border-emerald-500/35 dark:bg-emerald-900 dark:text-emerald-100">
+      <section className="rounded-[34px] border border-dashed border-emerald-800/40 bg-emerald-50/40 px-5 py-5 text-xs leading-relaxed text-emerald-900 sm:px-8 sm:py-6 dark:border-emerald-500/35 dark:bg-emerald-900 dark:text-emerald-100">
         {t(locale, "prayer.adabReminder")}
       </section>
     </div>

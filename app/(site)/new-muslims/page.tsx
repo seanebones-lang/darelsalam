@@ -2,20 +2,33 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { NewMuslimsCarousel } from "@/components/new-muslims-carousel";
 import { PortableBody } from "@/components/portable-body";
+import { localizePageContent, localizeSiteSettings } from "@/lib/i18n/localize-cms";
 import { t } from "@/lib/i18n/messages";
 import { getServerLocale } from "@/lib/i18n/server";
 import { getPageBySlug, getSiteSettings } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "New Muslims",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
+  const desc = t(locale, "meta.newMuslimsDescription");
+  return {
+    title: t(locale, "meta.newMuslimsTitle"),
+    description: desc,
+    openGraph: {
+      locale: locale === "ar" ? "ar_SA" : "en_US",
+      title: t(locale, "meta.newMuslimsTitle"),
+      description: desc,
+    },
+  };
+}
 
 export default async function NewMuslimsPage() {
-  const [settings, page, locale] = await Promise.all([
+  const [rawSettings, cms, locale] = await Promise.all([
     getSiteSettings(),
     getPageBySlug("new-muslims"),
     getServerLocale(),
   ]);
+  const settings = localizeSiteSettings(rawSettings, locale);
+  const page = localizePageContent(cms, locale);
 
   return (
     <div className="mx-auto w-full max-w-5xl space-y-12 px-4 py-12 sm:px-6 sm:py-16 md:py-24">

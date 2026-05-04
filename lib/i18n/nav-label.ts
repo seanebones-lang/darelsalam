@@ -24,6 +24,7 @@ export function localizedNavLabel(
   cmsLabel: string | null | undefined,
 ): string {
   if (locale !== "ar") return cmsLabel ?? "";
+  if (cmsLabel?.trim()) return cmsLabel;
   const key = href ? normalizePath(href) : null;
   if (key != null && NAV_AR[key]) return NAV_AR[key];
   return cmsLabel ?? "";

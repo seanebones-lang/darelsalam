@@ -6,9 +6,16 @@ export const siteSettings = defineType({
   type: "document",
   fields: [
     defineField({ name: "siteTitle", title: "Site title", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "siteTitleAr", title: "Site title (Arabic)", type: "string" }),
     defineField({
       name: "defaultMetaDescription",
       title: "Default meta description",
+      type: "text",
+      rows: 2,
+    }),
+    defineField({
+      name: "defaultMetaDescriptionAr",
+      title: "Default meta description (Arabic)",
       type: "text",
       rows: 2,
     }),
@@ -24,6 +31,7 @@ export const siteSettings = defineType({
       title: "Address",
       type: "string",
     }),
+    defineField({ name: "addressLineAr", title: "Address (Arabic)", type: "string" }),
     defineField({
       name: "phoneDisplay",
       title: "Phone (display)",
@@ -44,25 +52,35 @@ export const siteSettings = defineType({
       title: "Home — eyebrow",
       type: "string",
     }),
+    defineField({ name: "homeHeroEyebrowAr", title: "Home — eyebrow (Arabic)", type: "string" }),
     defineField({
       name: "homeHeroTitle",
       title: "Home — main heading",
       type: "string",
     }),
+    defineField({ name: "homeHeroTitleAr", title: "Home — main heading (Arabic)", type: "string" }),
     defineField({
       name: "homeHeroSubtitle",
       title: "Home — subtitle",
       type: "text",
       rows: 3,
     }),
+    defineField({ name: "homeHeroSubtitleAr", title: "Home — subtitle (Arabic)", type: "text", rows: 3 }),
     defineField({
       name: "donationRibbonTitle",
       title: "Donation ribbon title",
       type: "string",
     }),
+    defineField({ name: "donationRibbonTitleAr", title: "Donation ribbon title (Arabic)", type: "string" }),
     defineField({
       name: "donationRibbonSubtitle",
       title: "Donation ribbon subtitle",
+      type: "text",
+      rows: 2,
+    }),
+    defineField({
+      name: "donationRibbonSubtitleAr",
+      title: "Donation ribbon subtitle (Arabic)",
       type: "text",
       rows: 2,
     }),
@@ -95,22 +113,36 @@ export const siteSettings = defineType({
       title: "Youth center headline",
       type: "string",
     }),
+    defineField({ name: "youthHeadlineAr", title: "Youth center headline (Arabic)", type: "string" }),
     defineField({
       name: "youthStatusLabel",
       title: "Youth center status badge",
       type: "string",
       description: 'e.g. "Coming Soon"',
     }),
+    defineField({
+      name: "youthStatusLabelAr",
+      title: "Youth center status badge (Arabic)",
+      type: "string",
+    }),
     defineField({ name: "youthBody", title: "Youth center description", type: "text", rows: 4 }),
+    defineField({ name: "youthBodyAr", title: "Youth center description (Arabic)", type: "text", rows: 4 }),
     defineField({
       name: "learnDeenHeadline",
       title: "Learn Your Deen headline",
       type: "string",
     }),
+    defineField({ name: "learnDeenHeadlineAr", title: "Learn Your Deen headline (Arabic)", type: "string" }),
     defineField({ name: "learnDeenBody", title: "Learn Your Deen body", type: "text", rows: 4 }),
+    defineField({ name: "learnDeenBodyAr", title: "Learn Your Deen body (Arabic)", type: "text", rows: 4 }),
     defineField({
       name: "newMuslimsSectionTitle",
       title: "New Muslims section title",
+      type: "string",
+    }),
+    defineField({
+      name: "newMuslimsSectionTitleAr",
+      title: "New Muslims section title (Arabic)",
       type: "string",
     }),
     defineField({
@@ -124,15 +156,23 @@ export const siteSettings = defineType({
       title: "Fatwa section heading",
       type: "string",
     }),
+    defineField({ name: "fatwaHeadingAr", title: "Fatwa section heading (Arabic)", type: "string" }),
     defineField({
       name: "fatwaIntro",
       title: "Fatwa intro paragraph",
       type: "text",
       rows: 4,
     }),
+    defineField({ name: "fatwaIntroAr", title: "Fatwa intro (Arabic)", type: "text", rows: 4 }),
     defineField({
       name: "fatwaDisclaimer",
       title: "Fatwa privacy/disclaimer paragraph",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({
+      name: "fatwaDisclaimerAr",
+      title: "Fatwa disclaimer (Arabic)",
       type: "text",
       rows: 3,
     }),
@@ -144,12 +184,24 @@ export const siteSettings = defineType({
       description: "Reminder: AI is not scholarly authority; encourage Imam / Fatwa channels.",
     }),
     defineField({
+      name: "chatbotDisclaimerAr",
+      title: "Floating assistant disclaimer (Arabic)",
+      type: "text",
+      rows: 5,
+    }),
+    defineField({
       name: "chatbotSuggestedPrompts",
       title: "Suggested prompts (comma-separated or one per line)",
       type: "text",
       rows: 5,
       description:
         'Optional newline-separated hints displayed in the assistant. Example: "What are Jumu\'ah timings?" ',
+    }),
+    defineField({
+      name: "chatbotSuggestedPromptsAr",
+      title: "Suggested prompts (Arabic)",
+      type: "text",
+      rows: 5,
     }),
     defineField({
       name: "prayerLatitude",

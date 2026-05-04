@@ -6,7 +6,9 @@ export const carouselSlide = defineType({
   type: "document",
   fields: [
     defineField({ name: "title", title: "Title", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "titleAr", title: "Title (Arabic)", type: "string" }),
     defineField({ name: "subtitle", title: "Subtitle", type: "string" }),
+    defineField({ name: "subtitleAr", title: "Subtitle (Arabic)", type: "string" }),
     defineField({
       name: "image",
       title: "Image",
@@ -18,7 +20,13 @@ export const carouselSlide = defineType({
       title: "Body",
       type: "blockContent",
     }),
+    defineField({
+      name: "bodyAr",
+      title: "Body (Arabic)",
+      type: "blockContent",
+    }),
     defineField({ name: "linkLabel", title: "Button label", type: "string" }),
+    defineField({ name: "linkLabelAr", title: "Button label (Arabic)", type: "string" }),
     defineField({
       name: "linkHref",
       title: "Link URL",

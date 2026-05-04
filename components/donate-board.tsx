@@ -50,7 +50,9 @@ export function DonateBoard({
         <p className="text-xs uppercase tracking-[0.4em] text-emerald-800 dark:text-emerald-200">
           {t("donateBoard.eyebrow")}
         </p>
-        <h1 className="mt-3 font-serif text-4xl text-emerald-950 dark:text-emerald-50">{heroTitle}</h1>
+        <h1 className="mt-3 font-serif text-3xl text-emerald-950 sm:text-4xl dark:text-emerald-50">
+          {heroTitle}
+        </h1>
         {heroSubtitle && (
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
             {heroSubtitle}
@@ -93,12 +95,12 @@ export function DonateBoard({
             key={`${tier.amountLabel}-${tier.externalUrl ?? ""}`}
             target="_blank"
             rel="noreferrer noopener sponsored"
-            className="touch-manipulation rounded-3xl border border-emerald-900/15 bg-white px-6 py-10 text-center shadow-sm transition active:scale-[0.99] hover:-translate-y-0.5 hover:border-emerald-600 sm:px-8 dark:border-emerald-600/40 dark:bg-emerald-900"
+            className="touch-manipulation rounded-3xl border border-emerald-900/15 bg-white px-5 py-8 text-center shadow-sm transition active:scale-[0.99] hover:-translate-y-0.5 hover:border-emerald-600 sm:px-8 sm:py-10 dark:border-emerald-600/40 dark:bg-emerald-900"
           >
             <span className="text-sm uppercase tracking-[0.3em] text-emerald-800 dark:text-emerald-200">
               {t("donateBoard.support")}
             </span>
-            <p className="mt-6 font-serif text-4xl text-emerald-900 dark:text-emerald-50">
+            <p className="mt-5 font-serif text-3xl text-emerald-900 sm:mt-6 sm:text-4xl dark:text-emerald-50">
               {tier.amountLabel}
             </p>
           </a>
@@ -117,8 +119,8 @@ export function DonateBoard({
               rel="noreferrer noopener sponsored"
               className="touch-manipulation rounded-3xl border border-emerald-900/15 bg-emerald-50/40 px-6 py-6 transition active:scale-[0.99] hover:border-emerald-600 sm:py-5 dark:border-emerald-600/40 dark:bg-emerald-900"
             >
-              <div className="flex items-center justify-between gap-4">
-                <div>
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                <div className="min-w-0">
                   <p className="font-semibold text-emerald-950 dark:text-emerald-50">
                     {bucket.label}
                   </p>
@@ -126,7 +128,7 @@ export function DonateBoard({
                     <p className="text-sm text-zinc-600 dark:text-zinc-400">{bucket.subtitle}</p>
                   )}
                 </div>
-                <span className="text-xs uppercase tracking-wide text-emerald-900 dark:text-emerald-100">
+                <span className="shrink-0 text-xs uppercase tracking-wide text-emerald-900 dark:text-emerald-100">
                   {t("donateBoard.donateArrow")}
                 </span>
               </div>

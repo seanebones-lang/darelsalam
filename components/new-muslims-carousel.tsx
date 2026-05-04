@@ -47,11 +47,11 @@ export function NewMuslimsCarousel({ slides, sectionTitle }: NewMuslimsCarouselP
         <p className="text-xs uppercase tracking-[0.4em] text-emerald-800 dark:text-emerald-200">
           {sectionTitle ?? "New Muslims"}
         </p>
-        <h2 className="font-serif text-3xl text-emerald-950 dark:text-emerald-50">
+        <h2 className="font-serif text-2xl text-emerald-950 sm:text-3xl dark:text-emerald-50">
           {active.title ?? t("carousel.supporting")}
         </h2>
       </div>
-      <div className="rounded-[36px] border border-emerald-900/15 bg-emerald-50/40 px-8 py-10 shadow-inner dark:border-emerald-600/35 dark:bg-emerald-900">
+      <div className="rounded-[36px] border border-emerald-900/15 bg-emerald-50/40 px-4 py-6 shadow-inner sm:px-8 sm:py-10 dark:border-emerald-600/35 dark:bg-emerald-900">
         <div
           className={cn(
             "grid gap-8",
@@ -86,22 +86,22 @@ export function NewMuslimsCarousel({ slides, sectionTitle }: NewMuslimsCarouselP
             )}
           </div>
         </div>
-        <div className="mt-8 flex items-center justify-center gap-8 text-emerald-900 dark:text-emerald-100">
+        <div className="mt-6 flex items-center justify-center gap-6 text-emerald-900 sm:mt-8 sm:gap-8 dark:text-emerald-100">
           <button
             type="button"
             onClick={prev}
             aria-label={t("carousel.prev")}
-            className="rounded-full bg-white p-2 shadow-sm hover:bg-emerald-50 dark:bg-emerald-800 dark:hover:bg-emerald-700"
+            className="inline-flex min-h-11 min-w-11 touch-manipulation items-center justify-center rounded-full bg-white p-2 shadow-sm hover:bg-emerald-50 active:bg-emerald-100 dark:bg-emerald-800 dark:hover:bg-emerald-700"
           >
-            <ArrowLeftCircle className="h-7 w-7" aria-hidden />
+            <ArrowLeftCircle className="h-8 w-8" aria-hidden />
           </button>
           <button
             type="button"
             onClick={next}
             aria-label={t("carousel.next")}
-            className="rounded-full bg-white p-2 shadow-sm hover:bg-emerald-50 dark:bg-emerald-800 dark:hover:bg-emerald-700"
+            className="inline-flex min-h-11 min-w-11 touch-manipulation items-center justify-center rounded-full bg-white p-2 shadow-sm hover:bg-emerald-50 active:bg-emerald-100 dark:bg-emerald-800 dark:hover:bg-emerald-700"
           >
-            <ArrowRightCircle className="h-7 w-7" aria-hidden />
+            <ArrowRightCircle className="h-8 w-8" aria-hidden />
           </button>
         </div>
       </div>

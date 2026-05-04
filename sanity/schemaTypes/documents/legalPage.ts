@@ -13,11 +13,17 @@ export const legalPage = defineType({
       validation: (r) => r.required(),
     }),
     defineField({ name: "title", title: "Title", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "titleAr", title: "Title (Arabic)", type: "string" }),
     defineField({
       name: "body",
       title: "Content",
       type: "blockContent",
       validation: (r) => r.required(),
+    }),
+    defineField({
+      name: "bodyAr",
+      title: "Content (Arabic)",
+      type: "blockContent",
     }),
   ],
 });

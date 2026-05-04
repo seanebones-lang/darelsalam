@@ -37,7 +37,7 @@ export function CookieBanner() {
     <div
       role="dialog"
       aria-label={t("cookie.dialog")}
-      className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] start-[max(1rem,env(safe-area-inset-left))] end-[max(1rem,env(safe-area-inset-right))] z-[30] mx-auto max-w-xl touch-manipulation rounded-2xl border border-emerald-900/20 bg-white p-4 text-sm text-emerald-950 shadow-2xl sm:p-5 md:start-auto md:end-[max(1rem,env(safe-area-inset-right))] dark:border-emerald-100/30 dark:bg-emerald-950 dark:text-emerald-50"
+      className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] start-[max(0.75rem,env(safe-area-inset-left))] end-[max(0.75rem,env(safe-area-inset-right))] z-[35] mx-auto w-[min(100%,calc(100vw-1.5rem))] max-w-xl touch-manipulation rounded-2xl border border-emerald-900/20 bg-white p-4 text-sm text-emerald-950 shadow-2xl sm:p-5 md:start-auto md:end-[max(1rem,env(safe-area-inset-right))] dark:border-emerald-100/30 dark:bg-emerald-950 dark:text-emerald-50"
     >
       <p className="leading-relaxed">
         {t("cookie.bodyBefore")}{" "}

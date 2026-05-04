@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PortableBody } from "@/components/portable-body";
+import { localizePageContent } from "@/lib/i18n/localize-cms";
 import { t } from "@/lib/i18n/messages";
 import { getServerLocale } from "@/lib/i18n/server";
 import { getPageBySlug } from "@/lib/site-data";
-import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "About us",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
+  const desc = t(locale, "meta.aboutDescription");
+  return {
+    title: t(locale, "meta.aboutTitle"),
+    description: desc,
+    openGraph: {
+      locale: locale === "ar" ? "ar_SA" : "en_US",
+      title: t(locale, "meta.aboutTitle"),
+      description: desc,
+    },
+  };
+}
 
 export default async function AboutPage() {
-  const [cms, locale] = await Promise.all([
-    getPageBySlug("about"),
-    getServerLocale(),
-  ]);
+  const [cms, locale] = await Promise.all([getPageBySlug("about"), getServerLocale()]);
+  const page = localizePageContent(cms, locale);
 
   return (
     <div className="mx-auto w-full max-w-4xl space-y-10 px-4 py-12 sm:px-6 sm:py-16 md:py-24">
@@ -22,14 +31,14 @@ export default async function AboutPage() {
           {t(locale, "about.eyebrow")}
         </p>
         <h1 className="font-serif text-4xl text-emerald-950 md:text-5xl dark:text-emerald-50">
-          {cms?.title ?? "Mission • Vision"}
+          {page?.title ?? "Mission • Vision"}
         </h1>
       </div>
-      {cms?.intro && (
-        <p className="text-lg leading-relaxed text-emerald-900 dark:text-emerald-100">{cms.intro}</p>
+      {page?.intro && (
+        <p className="text-lg leading-relaxed text-emerald-900 dark:text-emerald-100">{page.intro}</p>
       )}
-      <PortableBody value={cms?.body ?? []} />
-      {!cms?.body?.length && (
+      <PortableBody value={page?.body ?? []} />
+      {!page?.body?.length && (
         <>
           <section className="space-y-5 rounded-[32px] border border-emerald-900/15 bg-white/90 p-8 dark:border-emerald-600/35 dark:bg-emerald-900">
             <h2 className="font-serif text-3xl text-emerald-950 dark:text-emerald-50">

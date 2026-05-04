@@ -3,11 +3,33 @@ import type { Locale } from "@/lib/i18n/constants";
 const en = {
   "common.skip": "Skip to content",
   "common.menu": "Menu",
+  "common.openNavigation": "Open navigation menu",
   "common.darElSalam": "Dar El Salam",
   "common.islamicCenter": "Islamic Center",
   "locale.toggle": "Site language",
   "locale.en": "English",
   "locale.ar": "العربية",
+
+  "meta.homeTitle": "Home",
+  "meta.homeDescription":
+    "Dar El Salam Islamic Center — prayer, learning, newcomer support, and community in Arlington, Texas.",
+  "meta.aboutTitle": "About us",
+  "meta.aboutDescription": "Mission, vision, and how Dar El Salam serves Arlington.",
+  "meta.contactTitle": "Contact",
+  "meta.contactDescription": "Reach the masjid office and Imam with adab.",
+  "meta.donateTitle": "Donate",
+  "meta.donateDescription":
+    "Support Dar El Salam through one-time or monthly giving and guided funds.",
+  "meta.newMuslimsTitle": "New Muslims",
+  "meta.newMuslimsDescription": "Resources and accompaniment for new Muslims with privacy and adab.",
+  "meta.prayerTitle": "Athan & Iqamah",
+  "meta.prayerDescription": "Weekly athan and iqāmah schedule for Dar El Salam.",
+  "meta.quranTitle": "Quran resources",
+  "meta.quranDescription": "Curated Quran entry points and masjid-linked resources.",
+  "meta.privacyTitle": "Privacy policy",
+  "meta.privacyDescription": "How we handle cookies, forms, and digital privacy.",
+  "meta.termsTitle": "Terms of use",
+  "meta.termsDescription": "Terms for using this website respectfully.",
 
   "footer.privacy": "Privacy",
   "footer.terms": "Terms of use",
@@ -72,6 +94,7 @@ const en = {
     "). Iqāmāh assumes published minute offsets editable in Sanity; manual athan corrections override case-by-case.",
   "prayer.colDate": "Date",
   "prayer.colAthanIqamah": "Athan / Iqāmah",
+  "prayer.scrollHint": "Scroll sideways to see all prayers.",
   "prayer.adabReminder":
     "Congregational adab reminder: prioritize silent phones, perfumes gently applied, walkways kept clear, salah lines straightened graciously, newcomer hospitality extended with patience, Imam announcements heeded first.",
 
@@ -126,6 +149,13 @@ const en = {
   "chat.title": "Islamic Etiquette Assistant",
   "chat.disclaimerDefault":
     "This assistant may err. Consult qualified scholarship for personal rulings.",
+  "chat.disclaimerAr":
+    "هذا المساعد قد يخطئ؛ لا يُعتمد عليه لفتاوى شخصية. راجع أهل العلم والإمام، واستخدم نماذج الاتصال الرسمية للمسائل الحساسة.",
+  "chat.suggestedPromptsAr": `ما أوقات الجمعة؟
+كيف أتواصل مع الإمام؟
+ما برامج المسلمين الجدد؟
+كيف أتبرع للمسجد؟
+ما آداب الصلاة في الجماعة؟`,
   "chat.askPrompt":
     "Ask about adab, salah basics, mosque programs posted on darelsalam.org, or how to reach the Imam.",
   "chat.suggestions": "Suggestions",
@@ -133,6 +163,12 @@ const en = {
   "chat.inputPlaceholder": "Write with respect…",
   "chat.sendAria": "Send message",
   "chat.inputLabel": "Your message",
+  "chat.error.rateLimit": "Please pause and try again later.",
+  "chat.error.invalidPayload": "Something went wrong with the request. Refresh and try again.",
+  "chat.error.conversationTooLong": "Conversation is too long. Close and open the assistant again.",
+  "chat.error.assistantUnavailable": "The assistant is temporarily unavailable.",
+  "chat.error.upstreamError": "The assistant could not complete the reply. Try again shortly.",
+  "chat.error.unknown": "Unable to reach the assistant.",
 
   "theme.group": "Site theme",
   "theme.light": "Light theme",
@@ -162,11 +198,32 @@ export type MessageKey = keyof typeof en;
 const ar: Record<MessageKey, string> = {
   "common.skip": "تخطي إلى المحتوى",
   "common.menu": "القائمة",
+  "common.openNavigation": "فتح قائمة التنقل",
   "common.darElSalam": "دار السلام",
   "common.islamicCenter": "المركز الإسلامي",
   "locale.toggle": "لغة الموقع",
   "locale.en": "English",
   "locale.ar": "العربية",
+
+  "meta.homeTitle": "الرئيسية",
+  "meta.homeDescription":
+    "مركز دار السلام الإسلامي — الصلاة والتعليم ومرافقة المسلمين الجدد والمجتمع في أرلينغتون، تكساس.",
+  "meta.aboutTitle": "من نحن",
+  "meta.aboutDescription": "الرسالة والرؤية وخدمات دار السلام في أرلينغتون.",
+  "meta.contactTitle": "اتصل بنا",
+  "meta.contactDescription": "التواصل مع مكتب المسجد والإمام بأدب.",
+  "meta.donateTitle": "تبرع",
+  "meta.donateDescription": "دعم دار السلام بتبرع لمرة أو شهري أو فئات موجهة.",
+  "meta.newMuslimsTitle": "المسلمون الجدد",
+  "meta.newMuslimsDescription": "موارد ومرافقة للمسلمين الجدد مع احترام الخصوصية والأدب.",
+  "meta.prayerTitle": "الأذان والإقامة",
+  "meta.prayerDescription": "جدول أسبوعي للأذان والإقامة في دار السلام.",
+  "meta.quranTitle": "موارد القرآن",
+  "meta.quranDescription": "مداخل للقرآن وروابط مرتبطة بالمسجد.",
+  "meta.privacyTitle": "سياسة الخصوصية",
+  "meta.privacyDescription": "ملفات تعريف الارتباط والنماذج والخصوصية الرقمية.",
+  "meta.termsTitle": "شروط الاستخدام",
+  "meta.termsDescription": "شروط استخدام الموقع باحترام.",
 
   "footer.privacy": "الخصوصية",
   "footer.terms": "شروط الاستخدام",
@@ -231,6 +288,7 @@ const ar: Record<MessageKey, string> = {
     "). الإقامة تفترض فروق الدقائق المنشورة في نظام الإدارة؛ تصحيحات يدوية للأذان تُطبّق حسب الحاجة.",
   "prayer.colDate": "التاريخ",
   "prayer.colAthanIqamah": "الأذان / الإقامة",
+  "prayer.scrollHint": "مرّر أفقياً لعرض جميع الصلوات.",
   "prayer.adabReminder":
     "تذكير بالآداب الجماعية: إسكات الهاتف، العطر باعتدال، إخلاء الممرات، تسوية الصفوف، ضيافة الوافدين بصبر، والالتزام بإعلانات الإمام.",
 
@@ -285,6 +343,13 @@ const ar: Record<MessageKey, string> = {
   "chat.title": "مساعد آداب إسلامية",
   "chat.disclaimerDefault":
     "قد يخطئ المساعد. استشر أهل العلم للأحكام الشخصية.",
+  "chat.disclaimerAr":
+    "هذا المساعد قد يخطئ؛ لا يُعتمد عليه لفتاوى شخصية. راجع أهل العلم والإمام، واستخدم نماذج الاتصال الرسمية للمسائل الحساسة.",
+  "chat.suggestedPromptsAr": `ما أوقات الجمعة؟
+كيف أتواصل مع الإمام؟
+ما برامج المسلمين الجدد؟
+كيف أتبرع للمسجد؟
+ما آداب الصلاة في الجماعة؟`,
   "chat.askPrompt":
     "اسأل عن الأدب، أساسيات الصلاة، برامج المسجد على darelsalam.org، أو كيفية التواصل مع الإمام.",
   "chat.suggestions": "اقتراحات",
@@ -292,6 +357,12 @@ const ar: Record<MessageKey, string> = {
   "chat.inputPlaceholder": "اكتب باحترام…",
   "chat.sendAria": "إرسال الرسالة",
   "chat.inputLabel": "رسالتك",
+  "chat.error.rateLimit": "يرجى التوقف قليلًا والمحاولة لاحقًا.",
+  "chat.error.invalidPayload": "حدث خطأ في الطلب. حدّث الصفحة وحاول مرة أخرى.",
+  "chat.error.conversationTooLong": "المحادثة طويلة جدًا. أغلق المساعد وافتحه من جديد.",
+  "chat.error.assistantUnavailable": "المساعد غير متاح مؤقتًا.",
+  "chat.error.upstreamError": "تعذّر إكمال الرد. حاول بعد قليل.",
+  "chat.error.unknown": "تعذّر الوصول إلى المساعد.",
 
   "theme.group": "مظهر الموقع",
   "theme.light": "فاتح",

@@ -1,19 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FatwaForm } from "@/components/fatwa-form";
+import { localizeSiteSettings } from "@/lib/i18n/localize-cms";
 import { t } from "@/lib/i18n/messages";
 import { getServerLocale } from "@/lib/i18n/server";
 import { getSiteSettings } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Contact",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale();
+  const desc = t(locale, "meta.contactDescription");
+  return {
+    title: t(locale, "meta.contactTitle"),
+    description: desc,
+    openGraph: {
+      locale: locale === "ar" ? "ar_SA" : "en_US",
+      title: t(locale, "meta.contactTitle"),
+      description: desc,
+    },
+  };
+}
 
 const MAPS_SEARCH =
   "https://www.google.com/maps/search/?api=1&query=Dar+Elsalam+Islamic+Center+500+W+Road+to+Six+Flags+Arlington+TX+76011";
 
 export default async function ContactPage() {
-  const [locale, settings] = await Promise.all([getServerLocale(), getSiteSettings()]);
+  const [locale, rawSettings] = await Promise.all([getServerLocale(), getSiteSettings()]);
+  const settings = localizeSiteSettings(rawSettings, locale);
 
   return (
     <div className="mx-auto w-full max-w-4xl space-y-6 px-4 py-12 sm:px-6 sm:py-16 md:py-24">

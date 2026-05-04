@@ -3,23 +3,30 @@ import type { Metadata } from "next";
 import { ActivityIcon } from "@/components/activity-icon";
 import { FatwaForm } from "@/components/fatwa-form";
 import { NewMuslimsCarousel } from "@/components/new-muslims-carousel";
+import { localizeSiteSettings } from "@/lib/i18n/localize-cms";
 import { t } from "@/lib/i18n/messages";
 import { getServerLocale } from "@/lib/i18n/server";
 import { getSiteSettings } from "@/lib/site-data";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const settings = await getSiteSettings();
+  const [raw, locale] = await Promise.all([getSiteSettings(), getServerLocale()]);
+  const settings = localizeSiteSettings(raw, locale);
+  const description =
+    settings.defaultMetaDescription?.trim() || t(locale, "meta.homeDescription");
   return {
-    title: "Home",
-    description: settings.defaultMetaDescription ?? undefined,
+    title: t(locale, "meta.homeTitle"),
+    description,
+    openGraph: {
+      locale: locale === "ar" ? "ar_SA" : "en_US",
+      title: t(locale, "meta.homeTitle"),
+      description,
+    },
   };
 }
 
 export default async function HomePage() {
-  const [settings, locale] = await Promise.all([
-    getSiteSettings(),
-    getServerLocale(),
-  ]);
+  const [rawSettings, locale] = await Promise.all([getSiteSettings(), getServerLocale()]);
+  const settings = localizeSiteSettings(rawSettings, locale);
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 py-12 sm:gap-24 sm:px-6 sm:py-16 md:py-24">
@@ -71,10 +78,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="rounded-[44px] border border-emerald-900/15 bg-emerald-900 text-emerald-50 shadow-[0_30px_80px_rgba(6,94,71,0.35)] px-10 py-12">
+      <section className="rounded-[44px] border border-emerald-900/15 bg-emerald-900 px-5 py-10 text-emerald-50 shadow-[0_30px_80px_rgba(6,94,71,0.35)] sm:px-10 sm:py-12">
         <div className="grid gap-6 md:grid-cols-[1.05fr_auto] md:items-center">
           <div>
-            <h2 className="font-serif text-3xl text-white md:text-4xl">
+            <h2 className="font-serif text-2xl text-white sm:text-3xl md:text-4xl">
               {settings.donationRibbonTitle}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-emerald-100">

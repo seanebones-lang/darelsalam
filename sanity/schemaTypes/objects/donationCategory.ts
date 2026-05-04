@@ -6,12 +6,14 @@ export const donationCategoryType = defineType({
   type: "object",
   fields: [
     defineField({ name: "label", title: "Title", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "labelAr", title: "Title (Arabic)", type: "string" }),
     defineField({
       name: "subtitle",
       title: "Subtitle (optional)",
       type: "string",
       description: "e.g. $50 or explained amount",
     }),
+    defineField({ name: "subtitleAr", title: "Subtitle (Arabic)", type: "string" }),
     defineField({
       name: "externalUrl",
       title: "External checkout URL",

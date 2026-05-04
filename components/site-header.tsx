@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { Menu } from "lucide-react";
+import { useEffect, useState } from "react";
 import { LocaleToggle } from "@/components/locale-toggle";
 import { PrayerCountdownNav } from "@/components/prayer-countdown-nav";
 import { useLocale } from "@/lib/i18n/locale-provider";
@@ -13,6 +14,15 @@ import { cn } from "@/lib/utils";
 export function SiteHeader({ links }: { links: NavLinkSanity[] }) {
   const [open, setOpen] = useState(false);
   const { locale, t } = useLocale();
+
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-emerald-900/10 bg-white/95 pt-[env(safe-area-inset-top,0px)] backdrop-blur-md dark:border-emerald-600/40 dark:bg-emerald-950">
@@ -39,13 +49,15 @@ export function SiteHeader({ links }: { links: NavLinkSanity[] }) {
               <ThemeToggle />
               <button
                 type="button"
-                className="touch-manipulation rounded-lg border border-emerald-900/20 px-3 py-2.5 text-sm font-semibold leading-none text-emerald-900 min-h-11 min-w-11 sm:px-4 dark:border-emerald-500/50 dark:text-emerald-100"
+                className="touch-manipulation inline-flex min-h-11 min-w-11 items-center justify-center rounded-xl border border-emerald-900/20 px-3 text-emerald-900 sm:px-4 dark:border-emerald-500/50 dark:text-emerald-100"
                 aria-expanded={open}
                 aria-controls="site-mobile-nav"
                 id="site-menu-button"
+                aria-label={t("common.openNavigation")}
                 onClick={() => setOpen((v) => !v)}
               >
-                {t("common.menu")}
+                <Menu className="h-5 w-5 shrink-0" aria-hidden />
+                <span className="sr-only">{t("common.menu")}</span>
               </button>
             </div>
           </div>
@@ -78,7 +90,7 @@ export function SiteHeader({ links }: { links: NavLinkSanity[] }) {
           id="site-mobile-nav"
           role="navigation"
           aria-labelledby="site-menu-button"
-          className="space-y-1 border-t border-emerald-900/10 px-4 py-3 sm:px-6 lg:hidden dark:border-emerald-700/50"
+          className="max-h-[min(72dvh,26rem)] space-y-0.5 overflow-y-auto overscroll-y-contain border-t border-emerald-900/10 bg-white/98 px-4 py-3 shadow-[0_12px_40px_rgba(6,36,28,0.12)] sm:px-6 lg:hidden dark:border-emerald-700/50 dark:bg-emerald-950/98 dark:shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
         >
           {links.map((link) => (
             <Link
