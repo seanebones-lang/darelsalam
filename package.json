@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "sanity:seed-legacy": "node scripts/generate-legacy-sanity-seed.mjs",
+    "sanity:import-legacy": "npx sanity datasets import -d production sanity/seeds/legacy-pages.ndjson"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.58",

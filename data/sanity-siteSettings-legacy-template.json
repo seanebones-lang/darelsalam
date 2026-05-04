@@ -1,0 +1,88 @@
+{
+  "note": "Field values captured from darelsalam.org / www.darelsalam.org (2026-05-04). Paste into Sanity Studio → Site settings. Donation tiers must match PayPal item_name parameters from the legacy donate page.",
+  "donationRibbonTitle": "Make a Difference Today: Your Donation Changes Lives",
+  "donationRibbonSubtitle": "",
+  "donationStripeOneTimeTiers": [
+    {
+      "amountLabel": "$50",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD"
+    },
+    {
+      "amountLabel": "$150",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD"
+    },
+    {
+      "amountLabel": "$250",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+donation&item_number=Enter+your+amount+below&currency_code=USD"
+    }
+  ],
+  "donationStripeMonthlyTiers": [
+    {
+      "amountLabel": "$50 / month",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation+&item_number=Enter+your+amount+below&currency_code=USD"
+    },
+    {
+      "amountLabel": "$150 / month",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD"
+    },
+    {
+      "amountLabel": "$250 / month",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD"
+    }
+  ],
+  "donationCategories": [
+    {
+      "label": "Classes",
+      "subtitle": "$50 or",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Classes&item_number=Enter+your+amount+below&currency_code=USD"
+    },
+    {
+      "label": "Saddaqah",
+      "subtitle": "$50 or",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Saddaqah&item_number=Enter+your+amount+below&currency_code=USD"
+    },
+    {
+      "label": "Masjid",
+      "subtitle": "$50 or",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Masjid&item_number=Enter+your+amount+below&currency_code=USD"
+    },
+    {
+      "label": "Youth",
+      "subtitle": "$50 or",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Youth&item_number=Enter+your+amount+below&currency_code=USD"
+    },
+    {
+      "label": "Zakkat Almaal",
+      "subtitle": "$50 or",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Zakkat+Almaal&item_number=Enter+the+amount+below&currency_code=USD"
+    },
+    {
+      "label": "Fitr Zakkah",
+      "subtitle": "$50 or",
+      "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Fitr+Zakkah+&item_number=Enter+your+amount+below&currency_code=USD"
+    }
+  ],
+  "activities": [
+    {
+      "title": "Salah",
+      "iconKey": "mosque",
+      "body": "Prayer is a fundamental practice mandated by Allah (SWT). We uphold all five daily prayers and warmly invite everyone to join us in this spiritual routine or to learn more about this path of goodness."
+    },
+    {
+      "title": "Classes",
+      "iconKey": "book",
+      "body": "At Dar El Salam, we offer inclusive classes open to everyone. We welcome all to come and deepen their understanding of the religion of peace."
+    },
+    {
+      "title": "Principles",
+      "iconKey": "compass",
+      "body": "Principles are essential in everyone's life, and we are committed to embodying ours. Our environment at Dar El Salam is rooted in Islamic values and is characterized by patience and grace."
+    }
+  ],
+  "youthHeadline": "Youth Center",
+  "youthStatusLabel": "(Coming Soon)",
+  "youthBody": "What better place can you involve your kids with other than a youth center at the masjid. W'll have a wide variety of sports/ wellbeing activities alongside a great supportive staff.",
+  "learnDeenHeadline": "Learn your Deen",
+  "learnDeenBody": "Perks of an amazing staff comes with great teachers; we not only prepare our bright students with an abundance of knowledge about the religion of peace but we prepare them for the real world that will ultimately achieve success for our youth.",
+  "newMuslimsSlidesNote": "Import legacy-pages.ndjson first, then add a reference in Site settings → New Muslims slides to document legacy-seed-slide-illustrated-guide (carouselSlide)."
+}

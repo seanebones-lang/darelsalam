@@ -1,0 +1,113 @@
+{
+  "capturedAt": "2026-05-04",
+  "sources": [
+    "https://darelsalam.org/",
+    "https://darelsalam.org/donate.html",
+    "https://www.darelsalam.org/mission.html",
+    "https://www.darelsalam.org/terms.html",
+    "https://www.darelsalam.org/page9.html",
+    "https://darelsalam.org/new-muslims.html",
+    "https://www.darelsalam.org/contact_us.html",
+    "https://www.darelsalam.org/quran.html"
+  ],
+  "notes": "Structured capture from the legacy public site for parity with the Next.js app. Cookie banner on the legacy home referenced privacy.html (missing); PayPal donation links were taken from live donate.html.",
+  "contact": {
+    "address": "500 W Road to Six Flags St, Arlington, TX 76011",
+    "phone": "+1 (817) 548-1700",
+    "email": "info@darelsalam.org"
+  },
+  "cookieBannerText": "We use cookies to give you the best experience. Read our cookie policy.",
+  "home": {
+    "donationRibbon": "Make a Difference Today: Your Donation Changes Lives",
+    "activitiesEyebrow": "OUR ACTIVITIES",
+    "activitiesTitle": "Physical, Spiritual, and Moral",
+    "activities": [
+      {
+        "title": "Salah",
+        "body": "Prayer is a fundamental practice mandated by Allah (SWT). We uphold all five daily prayers and warmly invite everyone to join us in this spiritual routine or to learn more about this path of goodness."
+      },
+      {
+        "title": "Classes",
+        "body": "At Dar El Salam, we offer inclusive classes open to everyone. We welcome all to come and deepen their understanding of the religion of peace."
+      },
+      {
+        "title": "Principles",
+        "body": "Principles are essential in everyone's life, and we are committed to embodying ours. Our environment at Dar El Salam is rooted in Islamic values and is characterized by patience and grace."
+      }
+    ],
+    "youthStatus": "(Coming Soon)",
+    "youthHeadline": "Youth Center",
+    "youthBody": "What better place can you involve your kids with other than a youth center at the masjid. W'll have a wide variety of sports/ wellbeing activities alongside a great supportive staff.",
+    "youthStatusPrefixNote": "Legacy HTML placed (Coming Soon) in the same block as the youth paragraph; the Next app uses youthStatusLabel + youthBody separately.",
+    "learnDeenHeadline": "Learn your Deen",
+    "learnDeenBody": "Perks of an amazing staff comes with great teachers; we not only prepare our bright students with an abundance of knowledge about the religion of peace but we prepare them for the real world that will ultimately achieve success for our youth."
+  },
+  "links": {
+    "briefIllustratedGuidePdf": "https://darelsalam.org/assets/Brief_Illustrated.pdf",
+    "masjidboxPrayerTimes": "https://masjidbox.com/prayer-times/darelsalam",
+    "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13421.307351206196!2d-97.1115389!3d32.7570611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d965a7a8445%3A0x840f5b5e60932adc!2sDar%20Elsalam%20Islamic%20Center!5e0!3m2!1sen!2sus!4v1710007792367!5m2!1sen!2sus"
+  },
+  "paypal": {
+    "business": "info@darelsalam.org",
+    "oneTimeTiers": [
+      {
+        "amountLabel": "$50",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD"
+      },
+      {
+        "amountLabel": "$150",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD"
+      },
+      {
+        "amountLabel": "$250",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+donation&item_number=Enter+your+amount+below&currency_code=USD"
+      }
+    ],
+    "monthlyTiers": [
+      {
+        "amountLabel": "$50 / month",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation+&item_number=Enter+your+amount+below&currency_code=USD"
+      },
+      {
+        "amountLabel": "$150 / month",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD"
+      },
+      {
+        "amountLabel": "$250 / month",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD"
+      }
+    ],
+    "categories": [
+      {
+        "label": "Classes",
+        "subtitle": "$50 or",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Classes&item_number=Enter+your+amount+below&currency_code=USD"
+      },
+      {
+        "label": "Saddaqah",
+        "subtitle": "$50 or",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Saddaqah&item_number=Enter+your+amount+below&currency_code=USD"
+      },
+      {
+        "label": "Masjid",
+        "subtitle": "$50 or",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Masjid&item_number=Enter+your+amount+below&currency_code=USD"
+      },
+      {
+        "label": "Youth",
+        "subtitle": "$50 or",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Youth&item_number=Enter+your+amount+below&currency_code=USD"
+      },
+      {
+        "label": "Zakkat Almaal",
+        "subtitle": "$50 or",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Zakkat+Almaal&item_number=Enter+the+amount+below&currency_code=USD"
+      },
+      {
+        "label": "Fitr Zakkah",
+        "subtitle": "$50 or",
+        "externalUrl": "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Fitr+Zakkah+&item_number=Enter+your+amount+below&currency_code=USD"
+      }
+    ]
+  }
+}

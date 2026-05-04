@@ -25,10 +25,10 @@ const en = {
   "home.hero.ctaContact": "Contact & Fatwa etiquette",
   "home.newMuslims.guideTitle": "A Brief Illustrated Guide to Understanding Islam",
   "home.newMuslims.guideBody":
-    "We pair dignified adab with hospitable introductions for neighbors exploring Islam beside us—classes, mentorship, salaams—always honoring privacy.",
+    "The legacy homepage links to a brief illustrated guide (PDF) for neighbors exploring Islam. Open the guide from the carousel below, or visit New Muslims for classes and accompaniment with privacy and adab.",
   "home.newMuslims.explore": "Explore newcomer resources →",
-  "home.donate.oneTime": "One time stewardship",
-  "home.donate.monthly": "Monthly stewardship",
+  "home.donate.oneTime": "One time donation",
+  "home.donate.monthly": "Monthly donation",
   "home.activities.eyebrow": "Our Activities",
   "home.activities.title": "Physical, Spiritual, and Moral",
 
@@ -39,22 +39,24 @@ const en = {
   "contact.formHeading": "Message the masjid office",
   "contact.formIntro":
     "Share respectful requests (classes, salaam visits, salaah accommodations, collaborations, salaah lessons, salaah etiquette tours).",
+  "contact.infoTitle": "Contact information",
+  "contact.openMaps": "Open map",
 
   "donate.title": "Donate",
 
   "about.eyebrow": "About Dar El Salam",
   "about.terms": "Terms of use →",
   "about.privacy": "Privacy →",
-  "about.missionTitle": "Mission",
+  "about.missionTitle": "Our Mission",
   "about.missionBody":
-    "Dar El Salam exists to cradle Arlington's believers and neighbors alike with prayer, learning, remembrance, philanthropy, newcomer hospitality, restorative youth leadership, and adab that mirrors rahmah manifested by our Messenger ﷺ.",
-  "about.visionTitle": "Vision",
+    "Our mission at Dar Elsalam Islamic Center is to cultivate the growth and leadership potential of the next generation of Muslims in our community by establishing safe, innovative, and spiritually enriching institutions. We are committed to nurturing their Islamic values, preserving their religious identity, fostering meaningful social connections, promoting academic excellence, and encouraging active citizenship. We aim to expand our facilities, build financial resources and endowments, and eventually establish a full-time Islamic school with the highest academic standards. Additionally, we plan to create a Youth and Family Center, complete with a café for social gatherings, to serve as a vibrant space for our community.",
+  "about.visionTitle": "Our Vision",
   "about.visionLi1":
-    "House five daily congregations with immaculate accessibility and calm crowd flow.",
+    "Be a beacon of Islamic worship and education guided by the Qur'an and Sunnah, marked by moderation and tolerance.",
   "about.visionLi2":
-    "Curate curricula spanning fiqh adab, Quran reflection, adolescent mentorship, marital counseling etiquette.",
+    "Foster unity and inclusiveness among Muslims of diverse cultural and ethnic backgrounds, and mutual understanding with non-Muslims.",
   "about.visionLi3":
-    "Broadcast transparent stewardship and neighborly alliances reflecting Islam's covenant of mercy.",
+    "Be recognized as a leading institution for Islamic education and a safe haven for young Muslims and their families, rooted in Islamic values.",
 
   "newMuslims.eyebrow": "Welcome wholeheartedly",
   "newMuslims.confidentialBefore": "Confidential inquiries deserving privacy? Approach Imam office or",
@@ -76,27 +78,29 @@ const en = {
   "quran.eyebrow": "Quran",
   "quran.fallbackTitle": "Listen, recite, and reflect reverently",
   "quran.fallbackP1":
-    "This page publishes curated Quran resources sanctioned by Imam / board—translations, etiquette for wudu preceding recitation, tajwid intros, journaling prompts—all steering hearts toward adab. Full mushaf UX should stay within trusted Quran apps audited by congregation leadership.",
+    "The legacy public quran.html page was minimal; the masjid linked congregational times via Masjidbox (darelsalam) and shared the illustrated guide PDF on the homepage. This page lists those same entry points until Imam-approved Quran resources are published in the CMS.",
   "quran.fallbackRefsTitle": "External references (until CMS assets publish):",
   "quran.fallbackLi1Label": "Quran.com — multilingual reading + audio recitations:",
-  "quran.fallbackLi2Label": "Islam Guide — newcomer overview of revelation etiquette:",
+  "quran.fallbackLi2Label": "Brief illustrated guide (PDF) from the legacy public site:",
+  "quran.fallbackLi3Label": "Masjidbox — congregational times link used on the legacy site:",
 
   "privacy.fallbackTitle": "Privacy Policy",
   "privacy.fallback1":
-    "This cookie notice summarizes what the legacy darelsalam.org referenced—finalize legal language with congregation counsel prior public launch (Sanity `legalPage` slug \"privacy\").",
+    "We use cookies to give you the best experience. This page summarizes the privacy topics published on the legacy darelsalam.org site (page9.html); have counsel review before relying on it as binding policy.",
   "privacy.fallback2":
-    "We minimally log form submissions routed to Imam-approved email inboxes (+ optional analytics governed by treasurer). Sensitive Fatwa dossiers deserve private meetings—please never share passwords or NIC images through unencrypted channels casually.",
+    "We may collect personal information you submit through forms (name, email, phone) and non-personal data such as IP address and browsing behavior via cookies. We use it to respond to inquiries, share programs and events, improve the site, and meet legal obligations.",
   "privacy.fallback3":
-    "Floating etiquette assistant transmits anonymized conversational logs only if enabled by Imam policy—default logs redact email and phone identifiers.",
+    "We do not sell your personal information. We may share data with service providers under confidentiality, or with legal authorities when required. Cookies can be managed in your browser; disabling them may limit some features. Contact the masjid office using the published address, phone, and email on this site.",
 
   "terms.fallbackTitle": "Terms of use",
   "terms.fallback1":
-    "These placeholders mirror historical Mobirise terms—replace via Sanity Legal pages before launching.",
+    "By using this website you agree to these Terms of Use and applicable laws. If you disagree, please do not use the site. (Condensed from legacy darelsalam.org terms.html.)",
   "terms.fallback2":
-    "Use of darelsalam.org means honoring adab: no scraping that degrades uptime, spamming Imam inboxes impersonating parishioners, injecting malware into forms, infringing copyrights of shared PDFs/audio, circumventing salaah etiquette guidance.",
+    "Content is provided to promote Dar Elsalam Islamic Center programs and events. Text, graphics, and logos are protected; personal, non-commercial use without modification is permitted. Engage respectfully; do not harm the site, break laws, or post offensive or defamatory material.",
   "terms.fallback3":
-    "Stewardship disclaimers emphasize transparency when linking external donation processors—we display only sanctioned URLs editable by treasurer + Imam council.",
-  "terms.fallback4": "Jazāk Allāhu khayran for reviewing patiently.",
+    "Third-party links are provided for convenience; we are not responsible for external sites. The site is provided “as-is” without warranties; liability is limited to the extent allowed by law. Terms may change; continued use means acceptance. Governing law: State of Texas, USA.",
+  "terms.fallback4":
+    "Questions: contact Dar Elsalam Islamic Center at 500 W Road to Six Flags St, Arlington, TX 76011; +1 (817) 548-1700; info@darelsalam.org.",
 
   "donateBoard.eyebrow": "Stewardship & charity",
   "donateBoard.checkoutNote":
@@ -180,7 +184,7 @@ const ar: Record<MessageKey, string> = {
   "home.hero.ctaContact": "اتصل بنا وآداب الفتوى",
   "home.newMuslims.guideTitle": "دليل مصوّر موجز لفهم الإسلام",
   "home.newMuslims.guideBody":
-    "نربط الأدب الحسن بضيافة الجيران الذين يستكشفون الإسلام معنا—دروس ومرافقة وتحيات—مع احترام الخصوصية دائمًا.",
+    "يرتبط موقعنا السابق بدليل مصوّر موجز (PDF) للجيران المستكشفين للإسلام. افتح الدليل من الشريط أدناه أو زر صفحة المسلمين الجدد للدروس والمرافقة مع احترام الخصوصية والأدب.",
   "home.newMuslims.explore": "استكشف موارد المسلمين الجدد ←",
   "home.donate.oneTime": "تبرع لمرة واحدة",
   "home.donate.monthly": "تبرع شهري",
@@ -194,22 +198,24 @@ const ar: Record<MessageKey, string> = {
   "contact.formHeading": "رسالة إلى مكتب المسجد",
   "contact.formIntro":
     "شارك طلبات محترمة (دروس، زيارات، تسهيلات للصلاة، تعاون، دروس صلاة، جولات آداب).",
+  "contact.infoTitle": "معلومات الاتصال",
+  "contact.openMaps": "فتح الخريطة",
 
   "donate.title": "تبرع",
 
   "about.eyebrow": "عن دار السلام",
   "about.terms": "شروط الاستخدام ←",
   "about.privacy": "الخصوصية ←",
-  "about.missionTitle": "الرسالة",
+  "about.missionTitle": "رسالتنا",
   "about.missionBody":
-    "تسعى دار السلام إلى احتضان المؤمنين والجيران في أرلينغتون بالصلاة والعلم والذكر والإحسان وضيافة المسلمين الجدد وبناء الشباب والأدب الذي يعكس رحمة رسولنا ﷺ.",
-  "about.visionTitle": "الرؤية",
+    "رسالتنا في مركز دار السلام الإسلامي هي تنمية إمكانات النمو والقيادة للجيل القادم من المسلمين في مجتمعنا من خلال مؤسسات آمنة ومبتكرة وغنية روحيًا. نلتزم برعاية قيمهم الإسلامية والحفاظ على هويتهم الدينية وبناء روابط اجتماعية مثمرة وتشجيع التميز الأكاديمي والمواطنة الفاعلة. نسعى لتوسيع مرافقنا وبناء الموارد المالية والوقفية وتأسيس مدرسة إسلامية بدوام كامل بأعلى المعايير الأكاديمية، وإنشاء مركز للشباب والعائلات مع مقهى للقاءات الاجتماعية.",
+  "about.visionTitle": "رؤيتنا",
   "about.visionLi1":
-    "إقامة الخمس يوميًا بسهولة الوصول وتنظيم هادئ للمصلين.",
+    "أن نكون منارة للعبادة والتعليم الإسلامي وفق القرآن والسنة، بروح اعتدال وتسامح.",
   "about.visionLi2":
-    "منهج يجمع بين أدب الفقه وتدبر القرآن ومرافقة الشباب وآداب الاستشارة الزوجية.",
+    "مجتمع موحّد متضامن بين مسلمي خلفيات ثقافية متنوعة، وتفاهم متبادل مع غير المسلمين.",
   "about.visionLi3":
-    "شفافية في العطاء وشراكات جيرة تعكس عهد الرحمة.",
+    "مؤسسة رائدة في التعليم الإسلامي وملاذ آمن للشباب وعائلاتهم، راسخة في القيم الإسلامية.",
 
   "newMuslims.eyebrow": "نرحب بكم من القلب",
   "newMuslims.confidentialBefore": "استفسارات تحتاج سرية؟ زر مكتب الإمام أو",
@@ -231,27 +237,29 @@ const ar: Record<MessageKey, string> = {
   "quran.eyebrow": "القرآن",
   "quran.fallbackTitle": "استمع وتلاوة وتدبر بوقار",
   "quran.fallbackP1":
-    "تنشر هذه الصفحة موارد قرآنية مختارة بإذن الإمام / مجلس الإدارة—تراجم، آداب الوضوء قبل التلاوة، مقدمات تجويد، ومسائل تدبر—كلها توجه القلب نحو الأدب. يُفضّل الاعتماد على تطبيقات قرآن موثوقة يعتمدها المسجد.",
+    "كانت صفحة القرآن على الموقع السابق بسيطة؛ كان المسجد يربط أوقات الجماعة عبر Masjidbox ويشارك دليل PDF من الصفحة الرئيسية. تذكر هذه الصفحة تلك المداخل حتى يُنشر محتوى القرآن في نظام الإدارة بإذن الإمام.",
   "quran.fallbackRefsTitle": "مراجع خارجية (حتى نشر المحتوى في النظام):",
   "quran.fallbackLi1Label": "Quran.com — قراءة متعددة اللغات مع تلاوات:",
-  "quran.fallbackLi2Label": "إسلام جايد — مقدمة للآداب حول الوحي:",
+  "quran.fallbackLi2Label": "دليل مصوّر موجز (PDF) من الموقع العام السابق:",
+  "quran.fallbackLi3Label": "Masjidbox — رابط أوقات الجماعة من الموقع السابق:",
 
   "privacy.fallbackTitle": "سياسة الخصوصية",
   "privacy.fallback1":
-    "هذا الملخص يوضح ما أشارت إليه النسخة السابقة من الموقع—يُستكمل النص القانوني مع المستشارين قبل الإطلاق (صفحة Sanity slug \"privacy\").",
+    "نستخدم ملفات تعريف الارتباط لتقديم أفضل تجربة. تلخّص هذه الصفحة مواضيع الخصوصية المنشورة سابقًا على darelsalam.org؛ يُراجع النص مع المستشار القانوني.",
   "privacy.fallback2":
-    "نسجل الحد الأدنى من بيانات النماذج المرسلة إلى البريد المعتمد (+ تحليلات اختيارية بحسب الإدارة). قضايا الفتوى الحساسة تستحق لقاءً خاصًا—لا تشارك كلمات المرور أو صور الهوية عبر قنوات غير آمنة.",
+    "قد نجمع معلومات شخصية ترسلها عبر النماذج (الاسم والبريد والهاتف) وبيانات غير شخصية مثل عنوان IP وسلوك التصفح عبر ملفات تعريف الارتباط. نستخدمها للرد والبرامج وتحسين الموقع والالتزامات القانونية.",
   "privacy.fallback3":
-    "المساعد الآلي يرسل سجلات محادثة مجهولة المصدر فقط إن سمحت سياسة الإمام—افتراضيًا نُخفي البريد والهاتف.",
+    "لا نبيع معلوماتك الشخصية. قد نشاركها مع مزودي خدمات بموجب سرية، أو مع السلطات عند الاقتضاء. يمكن إدارة ملفات تعريف الارتباط في المتصفح. للاستفسار تواصل مع المسجد عبر العنوان والهاتف والبريد المنشورة.",
 
   "terms.fallbackTitle": "شروط الاستخدام",
   "terms.fallback1":
-    "هذه نصوص مؤقتة تستبدل عبر صفحات Sanity قبل الإطلاق الرسمي.",
+    "باستخدامك الموقع فإنك توافق على هذه الشروط والقوانين المعمول بها. إن لم توافق فامتنع عن الاستخدام. (مختصر من النسخة السابقة للموقع.)",
   "terms.fallback2":
-    "استخدام الموقع يعني احترام الأدب: لا إرهاق للخادم، لا انتحال في مراسلة الإمام، لا برمجيات خبيثة في النماذج، لا انتهاك حقوق المواد المنشورة.",
+    "المحتوى يعزز برامج المركز؛ النصوص والشعارات محمية؛ يُسمح بالاستخدام الشخصي غير التجاري دون تعديل. تفاعل باحترام؛ لا تضر بالموقع أو تخالف القانون أو تنشر مسيئًا.",
   "terms.fallback3":
-    "روابط التبرع الخارجية تُعرض بشفافية حسب ما يقرره المجلس والخزينة.",
-  "terms.fallback4": "جزاكم الله خيرًا على المراجعة.",
+    "روابط الطرف الثالث للتسهيل دون مسؤوليتنا عن مواقعها. الموقع «كما هو» دون ضمانات؛ تُحدّد المسؤولية بحسب القانون. قد تتغير الشروط؛ الاستمرار يعني القبول. القانون الحاكم: ولاية تكساس، الولايات المتحدة.",
+  "terms.fallback4":
+    "للأسئلة: دار السلام الإسلامي — 500 W Road to Six Flags St, Arlington, TX 76011 — +1 (817) 548-1700 — info@darelsalam.org",
 
   "donateBoard.eyebrow": "الصدقة والعطاء",
   "donateBoard.checkoutNote":

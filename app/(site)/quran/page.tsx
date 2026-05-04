@@ -45,8 +45,24 @@ export default async function QuranPage() {
               </li>
               <li>
                 {t(locale, "quran.fallbackLi2Label")}{" "}
-                <Link className="underline" href="https://www.islam-guide.com" target="_blank" rel="noreferrer">
-                  islam-guide.com
+                <Link
+                  className="underline"
+                  href="https://darelsalam.org/assets/Brief_Illustrated.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  darelsalam.org/assets/Brief_Illustrated.pdf
+                </Link>
+              </li>
+              <li>
+                {t(locale, "quran.fallbackLi3Label")}{" "}
+                <Link
+                  className="underline"
+                  href="https://masjidbox.com/prayer-times/darelsalam"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  masjidbox.com/prayer-times/darelsalam
                 </Link>
               </li>
             </ul>

@@ -1,13 +1,14 @@
 import type { CarouselSlideSanity, SiteSettingsSanity } from "@/lib/types/sanity";
 
+/** Mirrors darelsalam.org homepage carousel link to the illustrated guide PDF. */
 const placeholderSlides: CarouselSlideSanity[] = [
   {
     _id: "seed-slide-guide",
     title: "A Brief Illustrated Guide to Understanding Islam",
-    subtitle: "A gentle orientation for newcomers and neighbors.",
+    subtitle: "Download the PDF shared on the legacy homepage.",
     body: [],
-    linkLabel: "Explore resources",
-    linkHref: "https://www.islam-guide.com/",
+    linkLabel: "Open guide (PDF)",
+    linkHref: "https://darelsalam.org/assets/Brief_Illustrated.pdf",
     orderRank: 0,
   },
 ];
@@ -33,70 +34,79 @@ export const FALLBACK_SITE_SETTINGS: SiteSettingsSanity = {
   homeHeroEyebrow: "Welcome",
   homeHeroTitle: "Dar El Salam Islamic Center",
   homeHeroSubtitle:
-    "Serving Arlington with daily prayer, learning circles, compassionate outreach to new Muslims, and space for reflection and adab.",
+    "Here at Dar El Salam we offer classes that are not exclusive to anyone. All are invited and welcomed into our doors to expand your knowledge about the religion of peace — alongside five daily prayers and community care.",
   donationRibbonTitle: "Make a Difference Today: Your Donation Changes Lives",
-  donationRibbonSubtitle:
-    "Your support strengthens classes for every age, community care, relief efforts, masjid upkeep, youth programs, and Zakat facilitation.",
+  donationRibbonSubtitle: "",
   donationStripeOneTimeTiers: [
     {
       amountLabel: "$50",
-      externalUrl: "https://example.com/donate?utm_source=website&amount=50",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD",
     },
     {
       amountLabel: "$150",
-      externalUrl: "https://example.com/donate&utm_source=website&amount=150",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD",
     },
     {
       amountLabel: "$250",
-      externalUrl: "https://example.com/donate&utm_source=website&amount=250",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+donation&item_number=Enter+your+amount+below&currency_code=USD",
     },
   ],
   donationStripeMonthlyTiers: [
     {
       amountLabel: "$50 / month",
-      externalUrl: "https://example.com/donate?utm_source=website&frequency=monthly&amount=50",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation+&item_number=Enter+your+amount+below&currency_code=USD",
     },
     {
       amountLabel: "$150 / month",
       externalUrl:
-        "https://example.com/donate?utm_source=website&frequency=monthly&amount=150",
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD",
     },
     {
       amountLabel: "$250 / month",
       externalUrl:
-        "https://example.com/donate?utm_source=website&frequency=monthly&amount=250",
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=General+Donation&item_number=Enter+your+amount+below&currency_code=USD",
     },
   ],
   donationCategories: [
     {
       label: "Classes",
-      subtitle: "$50 or preferred amount",
-      externalUrl: "https://example.com/donate-classes",
+      subtitle: "$50 or",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Classes&item_number=Enter+your+amount+below&currency_code=USD",
     },
     {
-      label: "Sadaqah",
-      subtitle: "$50 or preferred amount",
-      externalUrl: "https://example.com/donate-sadaqah",
+      label: "Saddaqah",
+      subtitle: "$50 or",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Saddaqah&item_number=Enter+your+amount+below&currency_code=USD",
     },
     {
       label: "Masjid",
-      subtitle: "$50 or preferred amount",
-      externalUrl: "https://example.com/donate-masjid",
+      subtitle: "$50 or",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Masjid&item_number=Enter+your+amount+below&currency_code=USD",
     },
     {
       label: "Youth",
-      subtitle: "$50 or preferred amount",
-      externalUrl: "https://example.com/donate-youth",
+      subtitle: "$50 or",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Youth&item_number=Enter+your+amount+below&currency_code=USD",
     },
     {
-      label: "Zakat al Maal",
-      subtitle: "$50 or preferred amount",
-      externalUrl: "https://example.com/zakat-maal",
+      label: "Zakkat Almaal",
+      subtitle: "$50 or",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Zakkat+Almaal&item_number=Enter+the+amount+below&currency_code=USD",
     },
     {
-      label: "Fitr Zakat",
-      subtitle: "$50 or preferred amount",
-      externalUrl: "https://example.com/zakat-fitr",
+      label: "Fitr Zakkah",
+      subtitle: "$50 or",
+      externalUrl:
+        "https://www.paypal.com/cgi-bin/webscr?business=info%40darelsalam.org&cmd=_donations&item_name=Fitr+Zakkah+&item_number=Enter+your+amount+below&currency_code=USD",
     },
   ],
   activities: [
@@ -104,28 +114,28 @@ export const FALLBACK_SITE_SETTINGS: SiteSettingsSanity = {
       title: "Salah",
       iconKey: "mosque",
       body:
-        "Prayer is a fundamental practice mandated by Allah (SWT). We uphold all five daily prayers and warmly invite everyone to join us or to learn more about this spiritual routine.",
+        "Prayer is a fundamental practice mandated by Allah (SWT). We uphold all five daily prayers and warmly invite everyone to join us in this spiritual routine or to learn more about this path of goodness.",
     },
     {
       title: "Classes",
       iconKey: "book",
       body:
-        "Inclusive classes deepen understanding with patience and adab. Scholars, seekers, curious neighbors—all are welcome.",
+        "At Dar El Salam, we offer inclusive classes open to everyone. We welcome all to come and deepen their understanding of the religion of peace.",
     },
     {
       title: "Principles",
       iconKey: "compass",
       body:
-        "Our environment embodies Islamic values grounded in rahmah, patience, and integrity so every guest feels cherished.",
+        "Principles are essential in everyone's life, and we are committed to embodying ours. Our environment at Dar El Salam is rooted in Islamic values and is characterized by patience and grace.",
     },
   ],
   youthHeadline: "Youth Center",
   youthStatusLabel: "(Coming Soon)",
   youthBody:
-    "Soon the masjid youth center will offer sports and wellbeing gatherings with caring mentors nurturing confidence and adab.",
+    "What better place can you involve your kids with other than a youth center at the masjid. W'll have a wide variety of sports/ wellbeing activities alongside a great supportive staff.",
   learnDeenHeadline: "Learn your Deen",
   learnDeenBody:
-    "Trusted teachers illuminate sacred knowledge alongside practical mentorship so scholars of tomorrow uplift their families.",
+    "Perks of an amazing staff comes with great teachers; we not only prepare our bright students with an abundance of knowledge about the religion of peace but we prepare them for the real world that will ultimately achieve success for our youth.",
   newMuslimsSectionTitle: "New Muslims",
   newMuslimsSlides: placeholderSlides,
   fatwaHeading: "Fatwa Request",
