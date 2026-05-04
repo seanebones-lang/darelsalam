@@ -164,13 +164,16 @@ In **Sanity Manage → API → CORS origins**, add:
 ## Deployment (Vercel)
 
 1. Connect the Git repository to a **Vercel** project (or use `vercel link` + `vercel --prod`).
-2. **Framework preset:** Next.js (auto-detected).
-3. **Root directory:** repository root (this app is not a monorepo sub-app).
-4. Set all [environment variables](#environment-variables) for **Production** (and **Preview** if needed).
-5. **Sanity CORS** must include the Vercel URL(s).
-6. **Image domains:** `cdn.sanity.io` is already allowed in `next.config.ts` under `images.remotePatterns`.
+2. **Framework preset:** **Next.js** — this repo includes `vercel.json` with `"framework": "nextjs"` so Vercel does not fall back to a static `public/` output (which causes **`404 NOT_FOUND`** for every route if the CLI said “No framework detected” during link).
+3. **Root directory:** repository root (this app is not a monorepo sub-app). If your machine has another lockfile above this folder, set **Root Directory** in the Vercel dashboard to this repo and/or rely on `vercel.json` so the build runs here.
+4. **Build & Output:** leave **Output Directory** empty (Next.js uses `.next` internally on Vercel). Do not set it to `public`.
+5. Set all [environment variables](#environment-variables) for **Production** (and **Preview** if needed).
+6. **Sanity CORS** must include the Vercel URL(s).
+7. **Image domains:** `cdn.sanity.io` is already allowed in `next.config.ts` under `images.remotePatterns`.
 
 Production builds use `next build`; Node runtime is used for the API routes that declare `export const runtime = "nodejs"`.
+
+After fixing framework/output settings, trigger a new deployment: **Deployments → Redeploy** or `vercel --prod`.
 
 ---
 
