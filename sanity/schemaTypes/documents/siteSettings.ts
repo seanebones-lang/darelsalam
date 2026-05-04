@@ -1,0 +1,197 @@
+import { defineArrayMember, defineField, defineType } from "sanity";
+
+export const siteSettings = defineType({
+  name: "siteSettings",
+  title: "Site settings",
+  type: "document",
+  fields: [
+    defineField({ name: "siteTitle", title: "Site title", type: "string", validation: (r) => r.required() }),
+    defineField({
+      name: "defaultMetaDescription",
+      title: "Default meta description",
+      type: "text",
+      rows: 2,
+    }),
+    defineField({
+      name: "navigation",
+      title: "Navigation",
+      type: "array",
+      of: [{ type: "navLink" }],
+      validation: (r) => r.min(3),
+    }),
+    defineField({
+      name: "addressLine",
+      title: "Address",
+      type: "string",
+    }),
+    defineField({
+      name: "phoneDisplay",
+      title: "Phone (display)",
+      type: "string",
+    }),
+    defineField({
+      name: "phoneHref",
+      title: "Phone (tel link, e.g. +18175581234)",
+      type: "string",
+    }),
+    defineField({
+      name: "email",
+      title: "Email",
+      type: "string",
+    }),
+    defineField({
+      name: "homeHeroEyebrow",
+      title: "Home — eyebrow",
+      type: "string",
+    }),
+    defineField({
+      name: "homeHeroTitle",
+      title: "Home — main heading",
+      type: "string",
+    }),
+    defineField({
+      name: "homeHeroSubtitle",
+      title: "Home — subtitle",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({
+      name: "donationRibbonTitle",
+      title: "Donation ribbon title",
+      type: "string",
+    }),
+    defineField({
+      name: "donationRibbonSubtitle",
+      title: "Donation ribbon subtitle",
+      type: "text",
+      rows: 2,
+    }),
+    defineField({
+      name: "donationStripeOneTimeTiers",
+      title: "Donate — One-time tiers",
+      type: "array",
+      of: [{ type: "donationTier" }],
+    }),
+    defineField({
+      name: "donationStripeMonthlyTiers",
+      title: "Donate — Monthly tiers",
+      type: "array",
+      of: [{ type: "donationTier" }],
+    }),
+    defineField({
+      name: "donationCategories",
+      title: "Donate — Categories / funds",
+      type: "array",
+      of: [{ type: "donationCategory" }],
+    }),
+    defineField({
+      name: "activities",
+      title: "Home — Activities row",
+      type: "array",
+      of: [{ type: "activityItem" }],
+    }),
+    defineField({
+      name: "youthHeadline",
+      title: "Youth center headline",
+      type: "string",
+    }),
+    defineField({
+      name: "youthStatusLabel",
+      title: "Youth center status badge",
+      type: "string",
+      description: 'e.g. "Coming Soon"',
+    }),
+    defineField({ name: "youthBody", title: "Youth center description", type: "text", rows: 4 }),
+    defineField({
+      name: "learnDeenHeadline",
+      title: "Learn Your Deen headline",
+      type: "string",
+    }),
+    defineField({ name: "learnDeenBody", title: "Learn Your Deen body", type: "text", rows: 4 }),
+    defineField({
+      name: "newMuslimsSectionTitle",
+      title: "New Muslims section title",
+      type: "string",
+    }),
+    defineField({
+      name: "newMuslimsSlides",
+      title: "New Muslims carousel slides",
+      type: "array",
+      of: [defineArrayMember({ type: "reference", to: [{ type: "carouselSlide" }] })],
+    }),
+    defineField({
+      name: "fatwaHeading",
+      title: "Fatwa section heading",
+      type: "string",
+    }),
+    defineField({
+      name: "fatwaIntro",
+      title: "Fatwa intro paragraph",
+      type: "text",
+      rows: 4,
+    }),
+    defineField({
+      name: "fatwaDisclaimer",
+      title: "Fatwa privacy/disclaimer paragraph",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({
+      name: "chatbotDisclaimer",
+      title: "Floating assistant disclaimer (shown in widget)",
+      type: "text",
+      rows: 5,
+      description: "Reminder: AI is not scholarly authority; encourage Imam / Fatwa channels.",
+    }),
+    defineField({
+      name: "chatbotSuggestedPrompts",
+      title: "Suggested prompts (comma-separated or one per line)",
+      type: "text",
+      rows: 5,
+      description:
+        'Optional newline-separated hints displayed in the assistant. Example: "What are Jumu\'ah timings?" ',
+    }),
+    defineField({
+      name: "prayerLatitude",
+      title: "Prayer times — latitude",
+      type: "number",
+    }),
+    defineField({
+      name: "prayerLongitude",
+      title: "Prayer times — longitude",
+      type: "number",
+    }),
+    defineField({
+      name: "prayerTimezoneLabel",
+      title: "Timezone label",
+      type: "string",
+      description: 'e.g. "America/Chicago"',
+    }),
+    defineField({
+      name: "prayerCalculationMethodLabel",
+      title: "Prayer calculation (Aladhan method number)",
+      type: "number",
+      description:
+        'See https://aladhan.com/calculation-methods — Islamic Society of North America is often method 15.',
+      initialValue: 15,
+    }),
+    defineField({
+      name: "iqamahMinutesAfterAdhan",
+      title: "Default iqamah (minutes after adhan)",
+      type: "object",
+      fields: [
+        defineField({ name: "fajr", title: "Fajr minutes", type: "number", initialValue: 20 }),
+        defineField({ name: "dhuhr", title: "Dhuhr minutes", type: "number", initialValue: 15 }),
+        defineField({ name: "asr", title: "Asr minutes", type: "number", initialValue: 15 }),
+        defineField({ name: "maghrib", title: "Maghrib minutes", type: "number", initialValue: 10 }),
+        defineField({ name: "isha", title: "Isha minutes", type: "number", initialValue: 15 }),
+      ],
+      options: { columns: 2 },
+    }),
+  ],
+  preview: {
+    prepare() {
+      return { title: "Site settings" };
+    },
+  },
+});
